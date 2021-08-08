@@ -10,11 +10,10 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event, Users }) {
-	const { join } = global.nodemodule["path"];
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by CatalizCS and SpermLord" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-		return api.sendMessage(`Connected successfully! This bot was made by CatalizCS and SpermLord\nThank you for using our products, have fun UwU <3`, threadID);
+		return api.sendMessage(`Bot đã đặt chân tới đây !UwU\nSpam là tao cho pay acc 😼 `, threadID);
 	}
 	else {
 		try {
@@ -41,7 +40,7 @@ module.exports.run = async function({ api, event, Users }) {
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "Welcome aboard {name}.\nChào mừng đã đến với {threadName}.\n{type} là thành viên thứ {soThanhVien} của nhóm 🥳" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "Welcome aboard {name}.\n Chào mừng hảo hán đã đến với nhóm {threadName}.\n{type} là Hảo hán thứ {soThanhVien} của nhóm 🥳" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'các bạn' : 'bạn')
