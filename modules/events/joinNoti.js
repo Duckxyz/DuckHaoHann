@@ -40,7 +40,7 @@ module.exports.run = async function({ api, event, Users }) {
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "Welcome aboard {name}.\n Chào mừng hảo hán đã đến với nhóm {threadName}.\n{type} là Hảo hán thứ {soThanhVien} của nhóm 🥳" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "Subscribe {name}!.\n Chào mừng hảo hán đã đến với nhóm {threadName}.\n{type} là Hảo hán thứ {soThanhVien} của nhóm 🥳" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'các bạn' : 'bạn')
