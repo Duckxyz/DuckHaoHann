@@ -38,7 +38,7 @@
     },
     "help": {
         "autoUnsend": true,
-        "delayUnsend": 10
+        "delayUnsend": 60
     },
     "math": {
         "WOLFRAM": "T8J8YV-H265UQ762K"
